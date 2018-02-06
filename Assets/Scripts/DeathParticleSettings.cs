@@ -7,7 +7,7 @@ public class DeathParticleSettings : EffectsParticle
     public ParticleSystem particle;
     public ParticleSystem[] particleChilds;
 
-    private void Start()
+    private void Awake()
     {
         particle = GetComponent<ParticleSystem>();
       

@@ -462,9 +462,9 @@ GameObject:
   - component: {fileID: 460128959}
   - component: {fileID: 460128958}
   - component: {fileID: 460128961}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,7 +543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668866215}
   - component: {fileID: 668866216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,8 +798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be99fe14fd098043887d03da41f4a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleList:
-  - {fileID: 1123293278}
 --- !u!4 &880579573
 Transform:
   m_ObjectHideFlags: 0
@@ -1144,6 +1142,10 @@ Prefab:
       propertyPath: randomSeed
       value: 1655180548
       objectReference: {fileID: 0}
+    - target: {fileID: 1190276705444728, guid: 1c128ae7e56bb664cb05dd7184f83a54, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114703634867618946, guid: 1c128ae7e56bb664cb05dd7184f83a54, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1c128ae7e56bb664cb05dd7184f83a54, type: 2}
@@ -1159,9 +1161,9 @@ GameObject:
   - component: {fileID: 1513905540}
   - component: {fileID: 1513905539}
   - component: {fileID: 1513905538}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1319,7 +1321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1927314557}
   - component: {fileID: 1927314556}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1450,6 +1452,10 @@ Prefab:
         type: 2}
       propertyPath: InitialModule.startSize.scalar
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190276705444728, guid: 1c128ae7e56bb664cb05dd7184f83a54, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114703634867618946, guid: 1c128ae7e56bb664cb05dd7184f83a54, type: 2}

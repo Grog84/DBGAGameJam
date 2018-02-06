@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Effects { Death = 0, Explosion = 1 };
-
 public class ParticleManager : MonoBehaviour
 {
     public static ParticleManager instance = null;
-    public GameObject[] particleList;
 
     void Awake()
     {

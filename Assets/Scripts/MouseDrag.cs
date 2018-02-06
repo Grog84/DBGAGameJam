@@ -78,7 +78,7 @@ public class MouseDrag : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Ground")
+        if (collision.transform.tag == "Ground" || collision.transform.tag == "Enemy")
         {
             isSelected = false;
             isThrown = false;
