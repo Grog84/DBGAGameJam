@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NavMeshMovement : MonoBehaviour
+public class CharacterNavigation : NavigationController
 {
 	public NavMeshAgent agent;
 	public Transform currentTarget;
