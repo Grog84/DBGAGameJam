@@ -9,10 +9,13 @@ public class MouseDrag : MonoBehaviour
     public float multiplyFactor = 1f;
     public float scaleAmount = 1.5f;
     public float yForceAmount = 2f;
+    public float maxSqrMagnitude = 1;
+    public bool isThrown = false;
+    public GameObject blood;
 
     public LayerMask groundMask;
 
-    Rigidbody m_Rigidbody;
+    Rigidbody m_Brigidbody;
     public Transform m_Sprite;
 
     //private void OnMouseDrag()
@@ -25,28 +28,34 @@ public class MouseDrag : MonoBehaviour
 
     private void Awake()
     {
-        m_Rigidbody = GetComponent<Rigidbody>();
+        m_Brigidbody = GetComponent<Rigidbody>();
     }
 
     private void OnMouseDown()
     {
         // select
         // sollevamento personaggio
-        LiftUp();
-        isSelected = true;
+        if (!isSelected)
+        {
+            LiftUp();
+            isSelected = true;
+        }
 
     }
 
     private void OnMouseUp()
     {
         // release    
-
-        ThrowObject();
+        if (!isThrown)
+        {
+            ThrowObject();
+        }
     }
 
     void ThrowObject()
     {
-        m_Rigidbody.isKinematic = false;
+        isThrown = true;
+        m_Brigidbody.isKinematic = false;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -54,26 +63,32 @@ public class MouseDrag : MonoBehaviour
         {
             Vector3 dir = hit.point - transform.position;
             dir.y = yForceAmount;
-            
-            Debug.Log(dir);
+            float mag = dir.sqrMagnitude;
+            mag = Mathf.Min(mag, maxSqrMagnitude);
 
-            m_Rigidbody.AddForce(dir * multiplyFactor);
+            m_Brigidbody.AddForce(dir.normalized * mag * multiplyFactor);
         }
     }
 
     void LiftUp()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + liftUpAmount, transform.position.z );
-        m_Rigidbody.isKinematic = true;
+        m_Brigidbody.isKinematic = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Ground")
+        if (collision.transform.tag == "Ground" || collision.transform.tag == "Enemy")
         {
             isSelected = false;
+            isThrown = false;
             m_Sprite.localScale = new Vector3(1 , 1 , 1);
+            ParticleManager.instance.EmitParticles(blood,transform.position);
         }
+        //if(isSelected && collision.transform.tag == "Enemy")
+        //{
+
+        //}
     }
     
 

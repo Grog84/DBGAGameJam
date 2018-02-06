@@ -5,12 +5,15 @@ using UnityEngine.AI;
 
 public class CharacterNavigation : NavigationController
 {
+<<<<<<< HEAD
 	[HideInInspector]public NavMeshAgent agent;
 	[HideInInspector]public Transform currentTarget;
 	private int currentTargetIndex = 0;
 	//private Transform lastTarget;
+=======
+	protected int currentTargetIndex = 0;
+>>>>>>> c922b58457e6774dd41a93d4063898381177ac39
 	public List<Transform> targets;
-
 
 	private void Start()
 	{
@@ -21,22 +24,13 @@ public class CharacterNavigation : NavigationController
 
 	private void Update()
 	{
-		MoveOnNavMesh(currentTarget);
+		StartMovement(currentTarget);
 
 		if (currentTarget != null
 				&& (new Vector2(currentTarget.transform.position.x, currentTarget.transform.position.z) - new Vector2(agent.transform.position.x, agent.transform.position.z)).sqrMagnitude
 				<= agent.stoppingDistance)
 		{
 			OnTargetReached();
-		}
-	}
-
-	private void MoveOnNavMesh(Transform target)
-	{
-		if (target != null)
-		{
-			agent.isStopped = false;
-			agent.destination = currentTarget.position;
 		}
 	}
 
@@ -56,4 +50,5 @@ public class CharacterNavigation : NavigationController
 		currentTargetIndex++;
 		currentTarget = targets[currentTargetIndex];
 	}
+
 }
