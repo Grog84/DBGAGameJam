@@ -707,7 +707,6 @@ MonoBehaviour:
   yForceAmount: 0.5
   maxSqrMagnitude: 1
   isThrown: 0
-  blood: {fileID: 1190276705444728, guid: 1c128ae7e56bb664cb05dd7184f83a54, type: 2}
   groundMask:
     serializedVersion: 2
     m_Bits: 256
