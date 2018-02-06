@@ -11,7 +11,6 @@ public class MouseDrag : MonoBehaviour
     public float yForceAmount = 2f;
     public float maxSqrMagnitude = 1;
     public bool isThrown = false;
-    public GameObject blood;
 
     public LayerMask groundMask;
 
@@ -84,7 +83,7 @@ public class MouseDrag : MonoBehaviour
             isSelected = false;
             isThrown = false;
             m_Sprite.localScale = new Vector3(1 , 1 , 1);
-            ParticleManager.instance.EmitParticles(blood,transform.position);
+            ParticleManager.instance.EmitParticles(Effects.Death, transform.position);
         }
         //if(isSelected && collision.transform.tag == "Enemy")
         //{
