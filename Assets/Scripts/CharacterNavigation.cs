@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class CharacterNavigation : NavigationController
 {
-	public NavMeshAgent agent;
-	public Transform currentTarget;
+	[HideInInspector]public NavMeshAgent agent;
+	[HideInInspector]public Transform currentTarget;
 	private int currentTargetIndex = 0;
 	//private Transform lastTarget;
 	public List<Transform> targets;
@@ -14,6 +14,7 @@ public class CharacterNavigation : NavigationController
 
 	private void Start()
 	{
+        agent = GetComponent<NavMeshAgent>();
 		currentTarget = targets[currentTargetIndex];
 		agent.destination = currentTarget.position;
 	}
