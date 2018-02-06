@@ -11,7 +11,7 @@ public class MouseDrag : MonoBehaviour
     public float yForceAmount = 2f;
     public float maxSqrMagnitude = 1;
     public bool isThrown = false;
-    public ParticleSystem blood;
+    public GameObject blood;
 
     public LayerMask groundMask;
 

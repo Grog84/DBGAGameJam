@@ -22,9 +22,9 @@ public class ParticleManager : MonoBehaviour
         // Update is called once per frame
     }
 
-    public void EmitParticles(ParticleSystem particle, Vector3 pos)
+    public void EmitParticles(GameObject particle, Vector3 pos)
     {
         particle.transform.position = pos;
-        particle.Emit(Random.Range(particle.GetComponent<EffectsParticle>().minParticles, particle.GetComponent<EffectsParticle>().maxParticles));
+        particle.GetComponent<EffectsParticle>().EmitParticles();
     }
 }

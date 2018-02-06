@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class EffectsParticle : MonoBehaviour
 {
-   public int maxParticles;
-   public int minParticles;
+   //public int maxParticles;
+   //public int minParticles;
+
+    public abstract void EmitParticles();
 }
