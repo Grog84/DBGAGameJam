@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Effects { Death = 0, Explosion}
+
 public class ParticleManager : MonoBehaviour
 {
     public static ParticleManager instance = null;
-
+    public ParticleSystem[] particles;
     void Awake()
     {
         //Check if instance already exists
@@ -22,9 +24,10 @@ public class ParticleManager : MonoBehaviour
         // Update is called once per frame
     }
 
-    public void EmitParticles(GameObject particle, Vector3 pos)
+    public void EmitParticles(Effects effect, Vector3 pos)
     {
-        particle.transform.position = pos;
-        particle.GetComponent<EffectsParticle>().EmitParticles();
+        particles[(int)effect].transform.position = pos;
+        particles[(int)effect].GetComponent<EffectsParticle>().EmitParticles();
     }
+
 }
