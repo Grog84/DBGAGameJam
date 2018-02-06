@@ -78,6 +78,7 @@ public class MouseDrag : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision);
         if (collision.transform.tag == "Ground" || collision.transform.tag == "Enemy")
         {
             isSelected = false;

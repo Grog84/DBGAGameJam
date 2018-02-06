@@ -5,11 +5,16 @@ using UnityEngine.AI;
 
 public class NavigationController : MonoBehaviour
 {
-	public NavMeshAgent agent;
-	public Transform currentTarget;
-	//private Transform lastTarget;
+    [HideInInspector] public NavMeshAgent agent;
+    [HideInInspector] public Transform currentTarget;
+    //private Transform lastTarget;
 
-	public void StartMovement(Transform target)
+    protected virtual void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
+
+    public void StartMovement(Transform target)
 	{
 		if (target != null)
 		{
