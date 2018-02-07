@@ -41,6 +41,7 @@ public class HeroManager : MonoBehaviour
         {
             Vector3 dir = (enemy.position - transform.position).normalized;
             heroHead.SetActive(true);
+            heroHead.transform.parent = null;
             heroHead.GetComponent<Rigidbody>().AddForce(dir * headForce);
         }
     }
@@ -89,10 +90,7 @@ public class HeroManager : MonoBehaviour
         endCharmed = true;
     }
 
-    public void ChangeFloat()
-    {
-        anim.SetFloat("EnterExit", 1);
-    }
+  
 
     void Update ()
     {
