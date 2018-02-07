@@ -81,26 +81,36 @@ public class MouseDrag : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision);
-        if (collision.transform.tag == "Ground" || collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (collision.transform.tag == "Ground" || collision.gameObject.layer == LayerMask.NameToLayer("Enemy")|| collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
         {
             isSelected = false;
             isThrown = false;
             m_Sprite.localScale = new Vector3(1 , 1 , 1);
+
             if (isLanding)
             {
                 isLanding = false;
                 ParticleManager.instance.EmitParticles(impactParticle, transform.position);
                 if(gameObject.layer == LayerMask.NameToLayer("Enemy"))
                 {
+                    if(collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
+                    {
+                        collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Squished,transform);
+                    }
                     Destroy(gameObject);
                 }
             }
-        }
-        //if(isSelected && collision.transform.tag == "Enemy")
-        //{
 
-        //}
+            else if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            {
+                if (collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
+                {
+                    collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
+                    Destroy(gameObject);
+                }
+            }
+
+        }
     }
     
     void Death()
