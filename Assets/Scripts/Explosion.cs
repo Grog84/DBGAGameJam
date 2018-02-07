@@ -10,4 +10,22 @@ public class Explosion : MonoBehaviour {
         Destroy(gameObject);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Hero")
+        {
+            other.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
+        }
+        else if (other.tag == "Enemy")
+        {
+            ParticleManager.instance.EmitParticles(Effects.Death, other.transform.position);
+            Destroy(other.gameObject);
+        }
+        else if (other.tag == "Mulino")
+        {
+            other.GetComponent<MulinoAvvento>().DestroyMulino();
+        }
+
+    }
+
 }
