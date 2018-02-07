@@ -32,7 +32,7 @@ public class MouseDrag : MonoBehaviour
         m_Brigidbody = GetComponent<Rigidbody>();
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         // select
         // sollevamento personaggio
@@ -44,7 +44,7 @@ public class MouseDrag : MonoBehaviour
 
     }
 
-    private void OnMouseUp()
+    public void OnMouseUp()
     {
         // release    
         if (!isThrown)
@@ -73,7 +73,7 @@ public class MouseDrag : MonoBehaviour
         }
     }
 
-    void LiftUp()
+    public void LiftUp()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + liftUpAmount, transform.position.z );
         m_Brigidbody.isKinematic = true;
