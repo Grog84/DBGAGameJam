@@ -27,13 +27,13 @@ public class DirectionAnimation : MonoBehaviour {
         agentPlaneVelocity = new Vector2(agentVelocity.x, agentVelocity.z);
 
         if (agentPlaneVelocity.x > 0 && agentPlaneVelocity.y > 0)
-            directionAngle = Mathf.Rad2Deg * Mathf.Atan(agentPlaneVelocity.x / agentPlaneVelocity.y);
+            directionAngle = Mathf.Rad2Deg * Mathf.Atan(agentPlaneVelocity.y / agentPlaneVelocity.x);
         else if (agentPlaneVelocity.x < 0 && agentPlaneVelocity.y > 0)
             directionAngle = 90f + Mathf.Rad2Deg * Mathf.Atan(agentPlaneVelocity.x / -agentPlaneVelocity.y);
         else if (agentPlaneVelocity.x < 0 && agentPlaneVelocity.y < 0)
             directionAngle = 180f + Mathf.Rad2Deg * Mathf.Atan(-agentPlaneVelocity.x / -agentPlaneVelocity.y);
         else if (agentPlaneVelocity.x > 0 && agentPlaneVelocity.y < 0)
-            directionAngle = 270f + Mathf.Rad2Deg * Mathf.Atan(-agentPlaneVelocity.y / agentPlaneVelocity.x);
+            directionAngle = 270f + Mathf.Rad2Deg * Mathf.Atan(agentPlaneVelocity.x / -agentPlaneVelocity.y);
         else if (agentPlaneVelocity.x == 0 && agentPlaneVelocity.y > 0)
             directionAngle = 90f;
         else if (agentPlaneVelocity.x == 0 && agentPlaneVelocity.y < 0)
@@ -42,6 +42,8 @@ public class DirectionAnimation : MonoBehaviour {
             directionAngle = 0f;
         else if (agentPlaneVelocity.x < 0 && agentPlaneVelocity.y == 0)
             directionAngle = 180f;
+
+        // Debug.Log(directionAngle);
 
         if (directionAngle < sideAngleRange || directionAngle > (360f - sideAngleRange))
         {
