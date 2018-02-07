@@ -6,46 +6,60 @@ using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
-	private bool isPaused = false;
-
+	public GameObject pausePanel;
+	public GameObject gamePanel;
 	public Image blackImage; // Black image used for fade effect
+	public float startGameFadeAlpha;
+	public float startLevelFadeAlpha;
+	public float endLevelFadeAlpha;
 	public float fadeDuration;
 
 	private void Start()
 	{
-		FadeFromBlack();
+		Fade(startGameFadeAlpha, fadeDuration);
+		StartCoroutine(WaitForFade());
+		gamePanel.SetActive(true);
+		pausePanel.SetActive(false);
 	}
 
 	private void Update()
 	{
-		// Input provvisorio
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			PauseGame();
-		}
+
+	}
+
+	public void StartNewLevel()
+	{
+		Fade(startLevelFadeAlpha, fadeDuration);
+	}
+
+	public void EndLevel()
+	{
+		blackImage.gameObject.SetActive(true);
+		Fade(endLevelFadeAlpha, fadeDuration);
 	}
 
 	public void PauseGame()
 	{
-		if (isPaused)
-		{
-			Time.timeScale = 1;
-			isPaused = false;
-		}
-		else
-		{
-			Time.timeScale = 0;
-			isPaused = true;
-		}
+		gamePanel.SetActive(false);
+		pausePanel.SetActive(true);
+		Time.timeScale = 0;
 	}
 
-	public void FadeFromBlack()
+	public void ResumeGame()
 	{
-		blackImage.DOFade(0, fadeDuration);
+		pausePanel.SetActive(false);
+		gamePanel.SetActive(true);
+		Time.timeScale = 1;
 	}
 
-	public void FadeToBlack()
+	public void Fade(float alpha, float duration)
 	{
-		blackImage.DOFade(1, fadeDuration);
+		blackImage.DOFade(alpha, duration);
+	}
+
+	IEnumerator WaitForFade()
+	{
+		yield return new WaitForSeconds(1f);
+		blackImage.gameObject.SetActive(false);
 	}
 }
