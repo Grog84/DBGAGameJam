@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 	public float startLevelFadeAlpha;
 	public float endLevelFadeAlpha;
 	public float fadeDuration;
+	public int levelNumber;
 
 	private void Start()
 	{
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
 
 	public void EndLevel()
 	{
+		SaveGameStatus();
 		blackImage.gameObject.SetActive(true);
 		Fade(endLevelFadeAlpha, fadeDuration);
 	}
@@ -55,6 +57,11 @@ public class GameManager : MonoBehaviour
 	public void Fade(float alpha, float duration)
 	{
 		blackImage.DOFade(alpha, duration);
+	}
+
+	public void SaveGameStatus()
+	{		
+		PlayerPrefs.SetInt("MaxLevel", Mathf.Max(PlayerPrefs.GetInt("MaxLevel"), levelNumber));
 	}
 
 	IEnumerator WaitForFade()

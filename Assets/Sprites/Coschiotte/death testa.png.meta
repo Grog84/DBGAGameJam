@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 9193ce11586fbee45a00d3d51f233c57
-timeCreated: 1518009212
+guid: b1d0bacec68656e478a7586a9b410c29
+timeCreated: 1518003552
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: atk back_0
-    21300002: atk back_1
-    21300004: atk back_2
-    21300006: atk back_3
-    21300008: atk back_4
-    21300010: atk back_5
-    21300012: atk back_6
+    21300000: death testa_0
+    21300002: death testa_1
+    21300004: death testa_2
+    21300006: death testa_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -106,49 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: atk back_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: atk back_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: atk back_2
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: atk back_3
+      name: death testa_0
       rect:
         serializedVersion: 2
         x: 0
@@ -162,7 +117,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: atk back_4
+      name: death testa_1
       rect:
         serializedVersion: 2
         x: 128
@@ -176,11 +131,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: atk back_5
+      name: death testa_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
+        x: 0
+        y: 0
         width: 128
         height: 128
       alignment: 0
@@ -190,10 +145,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: atk back_6
+      name: death testa_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 128
         y: 0
         width: 128
         height: 128
