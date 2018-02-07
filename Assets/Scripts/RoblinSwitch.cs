@@ -47,6 +47,8 @@ public class RoblinSwitch : MonoBehaviour {
         m_Navigation.enabled = false;
         m_Agent.enabled = false;
 
+        m_MouseDrag.thisObj = gameObject;
+
         isActive = false;
     }
 

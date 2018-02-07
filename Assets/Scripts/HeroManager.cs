@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public enum DeathType { None = 0, Decapitation = 1, Squished = 2 }
 
@@ -33,14 +34,24 @@ public class HeroManager : MonoBehaviour
     public float drunkDuration;
 
     public float charmedDuration;
-	
+    NavMeshAgent m_NavAgent;
+
+
+    private void Awake()
+    {
+        m_NavAgent = GetComponent<NavMeshAgent>();
+    }
+
     public void Death(DeathType death, Transform enemy)
     {
         anim.SetInteger("DeathIndex", (int)death);
+        m_NavAgent.speed = 0;
+
         if (death == DeathType.Decapitation)
         {
             Vector3 dir = (enemy.position - transform.position).normalized;
             heroHead.SetActive(true);
+            heroHead.transform.parent = null;
             heroHead.GetComponent<Rigidbody>().AddForce(dir * headForce);
         }
     }
@@ -89,10 +100,7 @@ public class HeroManager : MonoBehaviour
         endCharmed = true;
     }
 
-    public void ChangeFloat()
-    {
-        anim.SetFloat("EnterExit", 1);
-    }
+  
 
     void Update ()
     {
