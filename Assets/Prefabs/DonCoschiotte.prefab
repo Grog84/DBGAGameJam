@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 212485312564926022}
   - component: {fileID: 65774406169449040}
   - component: {fileID: 54935265365554600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HeroHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114588312831523634}
   - component: {fileID: 114410586765743912}
   - component: {fileID: 114169947130621116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DonCoschiotte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 4594224963297994}
   - component: {fileID: 212656402516081352}
   - component: {fileID: 95815654912299782}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,6 +211,21 @@ MonoBehaviour:
   heroHead: {fileID: 1014667148283072}
   anim: {fileID: 95815654912299782}
   headForce: 0
+  startStun: 0
+  endStun: 1
+  startScared: 0
+  endScared: 1
+  startDrunk: 0
+  endDrunk: 1
+  startCharmed: 0
+  endCharmed: 1
+  enterStunDuration: 0
+  stunDuration: 0
+  enterScaredDuration: 0
+  scaredDuration: 0
+  enterDrunkDuration: 0
+  drunkDuration: 0
+  charmedDuration: 0
 --- !u!114 &114410586765743912
 MonoBehaviour:
   m_ObjectHideFlags: 1
