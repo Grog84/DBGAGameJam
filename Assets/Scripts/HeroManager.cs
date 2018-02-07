@@ -50,9 +50,6 @@ public class HeroManager : MonoBehaviour
         startStun = false;
         endStun = false;
         anim.SetFloat("State", 1);
-        anim.SetFloat("EnterExit", 0);
-        yield return new WaitForSeconds(enterStunDuration);
-        anim.SetFloat("EnterExit", 1);
         yield return new WaitForSeconds(stunDuration);
         anim.SetFloat("EnterExit", 0);
         anim.SetFloat("State", 0);
@@ -64,9 +61,6 @@ public class HeroManager : MonoBehaviour
         startScared = false;
         endScared = false;
         anim.SetFloat("State", 2);
-        anim.SetFloat("EnterExit", 0);
-        yield return new WaitForSeconds(enterScaredDuration);
-        anim.SetFloat("EnterExit", 1);
         yield return new WaitForSeconds(scaredDuration);
         anim.SetFloat("EnterExit", 0);
         anim.SetFloat("State", 0);
@@ -78,9 +72,6 @@ public class HeroManager : MonoBehaviour
         startDrunk = false;
         endDrunk = false;
         anim.SetFloat("State", 3);
-        anim.SetFloat("EnterExit", 0);
-        yield return new WaitForSeconds(enterDrunkDuration);
-        anim.SetFloat("EnterExit", 1);
         yield return new WaitForSeconds(drunkDuration);
         anim.SetFloat("EnterExit", 0);
         anim.SetFloat("State", 0);
@@ -92,11 +83,15 @@ public class HeroManager : MonoBehaviour
         startCharmed = false;
         endCharmed = false;
         anim.SetFloat("State", 4);
-        anim.SetFloat("EnterExit", 0);
         yield return new WaitForSeconds(charmedDuration);
         anim.SetFloat("EnterExit", 0);
         anim.SetFloat("State", 0);
         endCharmed = true;
+    }
+
+    public void ChangeFloat()
+    {
+        anim.SetFloat("EnterExit", 1);
     }
 
     void Update ()
