@@ -25,6 +25,11 @@ public class Explosion : MonoBehaviour {
         {
             other.GetComponent<MulinoAvvento>().DestroyMulino();
         }
+        else if (other.tag == "Interactable")
+        {
+            other.GetComponent<MouseDrag>().anim.SetTrigger("Explosion");
+        }
+        
 
     }
 
