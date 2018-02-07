@@ -117,22 +117,22 @@ public class MenuManager : MonoBehaviour
 		{
 			SceneManager.LoadScene("Livello_01Official");
 		}
-		//if (levelID == 2)
-		//{
-		//	SceneManager.LoadScene("Livello_02Official 1");
-		//}
-		//if (levelID == 3)
-		//{
-		//	SceneManager.LoadScene("Livello_03Official");
-		//}
-		//if (levelID == 4)
-		//{
-		//	SceneManager.LoadScene("Livello_04Official 2");
-		//}
-		//if (levelID == 5)
-		//{
-		//	SceneManager.LoadScene("Livello_05Official");
-		//}
+		if (levelID == 2)
+		{
+			SceneManager.LoadScene("Livello_02Official 1");
+		}
+		if (levelID == 3)
+		{
+			SceneManager.LoadScene("Livello_03Official");
+		}
+		if (levelID == 4)
+		{
+			SceneManager.LoadScene("Livello_04Official 2");
+		}
+		if (levelID == 5)
+		{
+			SceneManager.LoadScene("Livello_05Official");
+		}
 		//if (levelID == 6)
 		//{
 		//	SceneManager.LoadScene("Livello_06Official");
