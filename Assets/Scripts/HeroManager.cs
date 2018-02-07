@@ -59,6 +59,7 @@ public class HeroManager : MonoBehaviour
     {
         if(other.tag == "FearTrigger")
         {
+            other.GetComponent<FearTrigger>().m_Tronco.StartRolling();
             startScared = true;
         }
     }

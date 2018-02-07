@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65717264845299240}
   - component: {fileID: 23818205429241854}
   - component: {fileID: 54546598003279226}
+  - component: {fileID: 114405273233600008}
   m_Layer: 0
   m_Name: FearTrigger
   m_TagString: FearTrigger
@@ -109,3 +110,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114405273233600008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517371821822776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f1d279491aee244ba453acb956e6172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Tronco: {fileID: 0}
