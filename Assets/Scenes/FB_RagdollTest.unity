@@ -389,8 +389,7 @@ Prefab:
         type: 2}
       propertyPath: particles.Array.data[0]
       value: 
-      objectReference: {fileID: 198881927498548130, guid: 1c128ae7e56bb664cb05dd7184f83a54,
-        type: 2}
+      objectReference: {fileID: 1803641354}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19c1be9b4e837e54ab1e6cf577d183e0, type: 2}
   m_IsPrefabParent: 0
@@ -432,6 +431,16 @@ Prefab:
     - target: {fileID: 4392220499542380, guid: 1c128ae7e56bb664cb05dd7184f83a54, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198881927498548130, guid: 1c128ae7e56bb664cb05dd7184f83a54,
+        type: 2}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198881927498548130, guid: 1c128ae7e56bb664cb05dd7184f83a54,
+        type: 2}
+      propertyPath: randomSeed
+      value: 1212027760
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c128ae7e56bb664cb05dd7184f83a54, type: 2}
@@ -739,6 +748,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4339923681977716, guid: 01f848860e8f09b40ab4e619e052a682,
     type: 2}
   m_PrefabInternal: {fileID: 1416727214}
+--- !u!198 &1803641354 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198881927498548130, guid: 1c128ae7e56bb664cb05dd7184f83a54,
+    type: 2}
+  m_PrefabInternal: {fileID: 1128870243}
 --- !u!1001 &1824040789
 Prefab:
   m_ObjectHideFlags: 0

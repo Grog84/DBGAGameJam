@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 4594224963297994}
   - component: {fileID: 212656402516081352}
   - component: {fileID: 95815654912299782}
+  - component: {fileID: 114544926662512838}
   m_Layer: 10
   m_Name: Skin
   m_TagString: Untagged
@@ -239,6 +240,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 95815654912299782}
   sideAngleRange: 20
+--- !u!114 &114544926662512838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1893637992183046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726414860576bb5458c04e1504ad2b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 95815654912299782}
 --- !u!114 &114588312831523634
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -18,6 +18,7 @@ public class MouseDrag : MonoBehaviour
 
     Rigidbody m_Brigidbody;
     public Transform m_Sprite;
+    public GameObject thisObj;
 
     //private void OnMouseDrag()
     //{
@@ -30,6 +31,7 @@ public class MouseDrag : MonoBehaviour
     private void Awake()
     {
         m_Brigidbody = GetComponent<Rigidbody>();
+        thisObj = gameObject;
     }
 
     public void OnMouseDown()
@@ -97,7 +99,7 @@ public class MouseDrag : MonoBehaviour
                     {
                         collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Squished,transform);
                     }
-                    Destroy(gameObject);
+                    Destroy(thisObj);
                 }
             }
 
