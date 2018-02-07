@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class Tronco : MonoBehaviour {
 
-    Transform targetDirection;
+    public Transform targetDirection;
     Animator m_Animator;
     Rigidbody rb;
     public float speed;
+
+    Vector3 rollingDirection;
+    bool isRolling = false;
 
 	// Use this for initialization
 	void Start () {
         m_Animator = GetComponent<Animator>();
         m_Animator.speed = 0;
         rb = GetComponent<Rigidbody>();
+        rollingDirection = (targetDirection.position - transform.position).normalized;
     }
 
     public void StartRolling()
     {
         m_Animator.speed = 1f;
-        rb.velocity = (targetDirection.position - transform.position).normalized * speed;
+        isRolling = true;
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -48,6 +53,12 @@ public class Tronco : MonoBehaviour {
     public void DestroyTronco()
     {
         Destroy(gameObject);
+    }
+
+    private void Update()
+    {
+        if(isRolling)
+            rb.velocity = rollingDirection * speed;
     }
 
 }
