@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class Cutscene : MonoBehaviour
 {
@@ -32,5 +33,12 @@ public class Cutscene : MonoBehaviour
 		yield return new WaitForSeconds(2f);
 		gameLogoFather.SetActive(true);
 		gameLogo.DOFade(1, 2f);
+		StartCoroutine(WaitBeforeLoad());
+	}
+
+	IEnumerator WaitBeforeLoad()
+	{
+		yield return new WaitForSeconds(2f);
+		SceneManager.LoadScene("GM_SelectionMenu");
 	}
 }

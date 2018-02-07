@@ -72,10 +72,10 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 0.25
     functionName: ChangeFloat
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 726414860576bb5458c04e1504ad2b43,
+    objectReferenceParameter: {fileID: 11500000, guid: cb116a99b40b5a24da4ba2c16ef786c1,
       type: 3}
     floatParameter: 0
     intParameter: 0
