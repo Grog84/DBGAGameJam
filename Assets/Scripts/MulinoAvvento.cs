@@ -7,6 +7,8 @@ public class MulinoAvvento : MonoBehaviour {
 
     public void DestroyMulino()
     {
+        Debug.Log("DestroyMulino");
+     
         ParticleManager.instance.EmitParticles(Effects.Smoke, transform.position);
         Destroy(gameObject);
     }
