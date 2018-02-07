@@ -10,6 +10,7 @@ public class EnemyNavigation : NavigationController
 	protected override void Start()
 	{
         base.Start();
+        hero = FindObjectOfType<HeroManager>().transform;
 		currentTarget = hero;
 		agent.destination = currentTarget.position;
 	}
