@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -20,9 +21,9 @@ public class MenuManager : MonoBehaviour
 	public GameObject levelTenButtonDisabled;
 
 	public Animator backgroundAnimator;
-	public Animator corgiAnimator;
-	public Animator fabbroNataleAnimator;
-	public Animator hatPeasantAnimator;
+	//public Animator corgiAnimator;
+	//public Animator fabbroNataleAnimator;
+	//public Animator hatPeasantAnimator;
 
 
 	private void Start()
@@ -112,6 +113,45 @@ public class MenuManager : MonoBehaviour
 
 	public void LoadLevel(int levelID)
 	{
-		// Load scenes
+		if (levelID == 1)
+		{
+			SceneManager.LoadScene("Livello_01Official");
+		}
+		//if (levelID == 2)
+		//{
+		//	SceneManager.LoadScene("Livello_02Official 1");
+		//}
+		//if (levelID == 3)
+		//{
+		//	SceneManager.LoadScene("Livello_03Official");
+		//}
+		//if (levelID == 4)
+		//{
+		//	SceneManager.LoadScene("Livello_04Official 2");
+		//}
+		//if (levelID == 5)
+		//{
+		//	SceneManager.LoadScene("Livello_05Official");
+		//}
+		//if (levelID == 6)
+		//{
+		//	SceneManager.LoadScene("Livello_06Official");
+		//}
+		//if (levelID == 7)
+		//{
+		//	SceneManager.LoadScene("Livello_07Official");
+		//}
+		if (levelID == 8)
+		{
+			// Da settare
+		}
+		if (levelID == 9)
+		{
+			// Da settare
+		}
+		if (levelID == 10)
+		{
+			// Da settare
+		}
 	}
 }
