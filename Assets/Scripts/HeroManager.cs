@@ -94,10 +94,14 @@ public class HeroManager : MonoBehaviour
         startCharmed = false;
         endCharmed = false;
         anim.SetFloat("State", 4);
-        yield return new WaitForSeconds(charmedDuration);
+        while (!endCharmed)
+        {
+            yield return null;
+        }
+
         anim.SetFloat("EnterExit", 0);
         anim.SetFloat("State", 0);
-        endCharmed = true;
+        
     }
 
   
