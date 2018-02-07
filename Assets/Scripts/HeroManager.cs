@@ -24,16 +24,12 @@ public class HeroManager : MonoBehaviour
     public bool endCharmed = true;
 
     [Header("Statistics and Cooldowns")]
-    public float enterStunDuration;
     public float stunDuration;
 
-    public float enterScaredDuration;
     public float scaredDuration;
 
-    public float enterDrunkDuration;
     public float drunkDuration;
 
-    public float charmedDuration;
     NavMeshAgent m_NavAgent;
 
 
