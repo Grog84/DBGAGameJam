@@ -25,6 +25,7 @@ public class Explosion : MonoBehaviour {
         }
         else if (other.tag == "Mulino")
         {
+            Debug.Log("DestroyMulino");
             other.GetComponent<MulinoAvvento>().DestroyMulino();
         }
         else if (other.tag == "Interactable")

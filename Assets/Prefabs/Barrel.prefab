@@ -140,11 +140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821a6049f06e4234597cb492f580f094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liftUpAmount: 1
+  liftUpAmount: 0.7
   isSelected: 0
   multiplyFactor: 100
   scaleAmount: 0.5
-  yForceAmount: 2
+  yForceAmount: 0.5
   maxSqrMagnitude: 5
   isThrown: 0
   isLanding: 0
