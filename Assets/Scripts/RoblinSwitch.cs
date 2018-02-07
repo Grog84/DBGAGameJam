@@ -10,6 +10,7 @@ public class RoblinSwitch : MonoBehaviour {
     NavMeshAgent m_Agent;
     EnemyNavigation m_Navigation;
 
+    public Animator anim;
     public MouseDrag m_MouseDrag;
 
     bool isActive = true;
@@ -41,8 +42,8 @@ public class RoblinSwitch : MonoBehaviour {
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
             {
+                anim.SetFloat("State",2);
                 collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
-                Destroy(gameObject);
             }
         }
     }
