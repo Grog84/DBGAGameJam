@@ -1283,6 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e591290633020b442ac8e6f71033b15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 95167784788843218}
   m_MouseDrag: {fileID: 114599581784953162}
 --- !u!114 &114496854781273722
 MonoBehaviour:
@@ -1321,7 +1322,9 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+  anim: {fileID: 0}
   m_Sprite: {fileID: 4396306310791480}
+  thisObj: {fileID: 0}
 --- !u!114 &114871295631115186
 MonoBehaviour:
   m_ObjectHideFlags: 1

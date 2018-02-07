@@ -113,6 +113,13 @@ public class MouseDrag : MonoBehaviour
                         collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Squished, transform);
 
                     } 
+                    else if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+                    {
+                        ParticleManager.instance.EmitParticles(impactParticle, collision.transform.position);
+                        Destroy(collision.gameObject);
+                    }
+
+                    m_Brigidbody.isKinematic = true;
                     anim.SetTrigger("Explosion");
 
                 }

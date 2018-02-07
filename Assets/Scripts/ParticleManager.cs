@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Effects { Death = 0, Explosion}
+public enum Effects { Death = 0, Smoke = 1}
 
 public class ParticleManager : MonoBehaviour
 {

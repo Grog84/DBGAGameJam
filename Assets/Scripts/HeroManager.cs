@@ -52,11 +52,21 @@ public class HeroManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "FearTrigger")
+        {
+            startScared = true;
+        }
+    }
+
     IEnumerator Stun()
     {
         startStun = false;
         endStun = false;
         anim.SetFloat("State", 1);
+        yield return new WaitForSeconds(0.3f);
+        anim.SetFloat("EnterExit", 1);
         yield return new WaitForSeconds(stunDuration);
         anim.SetFloat("EnterExit", 0);
         anim.SetFloat("State", 0);
@@ -68,6 +78,8 @@ public class HeroManager : MonoBehaviour
         startScared = false;
         endScared = false;
         anim.SetFloat("State", 2);
+        yield return new WaitForSeconds(0.3f);
+        anim.SetFloat("EnterExit", 1);
         yield return new WaitForSeconds(scaredDuration);
         anim.SetFloat("EnterExit", 0);
         anim.SetFloat("State", 0);
@@ -79,6 +91,8 @@ public class HeroManager : MonoBehaviour
         startDrunk = false;
         endDrunk = false;
         anim.SetFloat("State", 3);
+        yield return new WaitForSeconds(0.3f);
+        anim.SetFloat("EnterExit", 1);
         yield return new WaitForSeconds(drunkDuration);
         anim.SetFloat("EnterExit", 0);
         anim.SetFloat("State", 0);

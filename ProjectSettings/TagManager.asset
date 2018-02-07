@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - Hero
   - Mulino
+  - FearTrigger
   layers:
   - Default
   - TransparentFX

@@ -8,12 +8,12 @@ public class AnimationManager : MonoBehaviour
 
     public void ChangeFloat()
     {
+        Debug.Log("Entro");
         anim.SetFloat("EnterExit", 1);
     }
 
     public void StopDeath()
     {
-        Debug.Log("Entro");
         anim.SetInteger("DeathIndex", 0);
     }
 
