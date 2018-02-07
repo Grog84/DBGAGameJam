@@ -23,6 +23,8 @@ public class HeroManager : MonoBehaviour
     public bool startCharmed = false;
     public bool endCharmed = true;
 
+    float initialSpeed;
+
     [Header("Statistics and Cooldowns")]
     public float stunDuration;
 
@@ -36,6 +38,7 @@ public class HeroManager : MonoBehaviour
     private void Awake()
     {
         m_NavAgent = GetComponent<NavMeshAgent>();
+        float initialSpeed = m_NavAgent.speed;
     }
 
     public void Death(DeathType death, Transform enemy)
@@ -57,6 +60,15 @@ public class HeroManager : MonoBehaviour
         if(other.tag == "FearTrigger")
         {
             startScared = true;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Beer")
+        {
+            startDrunk = true;
+            Destroy(collision.gameObject);
         }
     }
 
@@ -88,6 +100,7 @@ public class HeroManager : MonoBehaviour
 
     IEnumerator Drunk()
     {
+        m_NavAgent.speed = 0;
         startDrunk = false;
         endDrunk = false;
         anim.SetFloat("State", 3);
@@ -96,6 +109,7 @@ public class HeroManager : MonoBehaviour
         yield return new WaitForSeconds(drunkDuration);
         anim.SetFloat("EnterExit", 0);
         anim.SetFloat("State", 0);
+        m_NavAgent.speed = initialSpeed;
         endDrunk = true;
     }
 
