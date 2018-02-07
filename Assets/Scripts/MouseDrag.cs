@@ -91,6 +91,10 @@ public class MouseDrag : MonoBehaviour
             {
                 isLanding = false;
                 ParticleManager.instance.EmitParticles(impactParticle, transform.position);
+                if(gameObject.layer == LayerMask.NameToLayer("Enemy"))
+                {
+                    Destroy(gameObject);
+                }
             }
         }
         //if(isSelected && collision.transform.tag == "Enemy")
