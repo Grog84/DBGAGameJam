@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222572983555253474}
   - component: {fileID: 114701346177130496}
   - component: {fileID: 95330408402618884}
+  - component: {fileID: 114397275986871678}
   m_Layer: 5
   m_Name: Corgi
   m_TagString: Untagged
@@ -46,6 +47,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114397275986871678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1906564946052090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4c11a412a005f44ab279f390579d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animType: 1
 --- !u!114 &114701346177130496
 MonoBehaviour:
   m_ObjectHideFlags: 1

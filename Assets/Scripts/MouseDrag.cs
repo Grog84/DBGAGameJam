@@ -16,6 +16,7 @@ public class MouseDrag : MonoBehaviour
     public Effects deathParticle;
     public LayerMask groundMask;
 
+    public Animator anim;
     Rigidbody m_Brigidbody;
     public Transform m_Sprite;
     public GameObject thisObj;
@@ -31,6 +32,7 @@ public class MouseDrag : MonoBehaviour
     private void Awake()
     {
         m_Brigidbody = GetComponent<Rigidbody>();
+        //anim = GetComponent<Animator>();
         thisObj = gameObject;
     }
 
@@ -92,10 +94,10 @@ public class MouseDrag : MonoBehaviour
             if (isLanding)
             {
                 isLanding = false;
-                ParticleManager.instance.EmitParticles(impactParticle, transform.position);
 
                 if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
                 {
+                    ParticleManager.instance.EmitParticles(impactParticle, transform.position);
                     if(collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
                     {
                         collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Squished,transform);
@@ -103,15 +105,34 @@ public class MouseDrag : MonoBehaviour
 
                     Destroy(thisObj);
                 }
-            }
 
+                if(gameObject.tag == "Interactable")
+                {
+                    if (collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
+                    {
+                        collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Squished, transform);
+
+                    } 
+                    anim.SetTrigger("Explosion");
+
+                }
+            }
+            else
+            {
+                if (gameObject.tag == "Interactable")
+                {
+                    if (collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
+                    {
+                        Debug.Log("Entro");
+                        anim.SetTrigger("Explosion");
+                        collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
+                    }
+
+                }
+            }
         }
     }
-    
-    void Death()
-    {
-        Destroy(gameObject);
-    }
+
 
     private void Update()
     {
