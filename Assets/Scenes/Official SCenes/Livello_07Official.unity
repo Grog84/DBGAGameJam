@@ -95,7 +95,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.65
+    agentRadius: 0.47
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -103,11 +103,11 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.21666665
+    cellSize: 0.15666667
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-  m_NavMeshData: {fileID: 23800000, guid: 126136d112a6f724bb873d949edadb49, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 98d0ce9a6151df544b42f603f5c0445e, type: 2}
 --- !u!1 &8219894 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 585343417e9888e40ac82da933a9450a, type: 3}
@@ -21464,7 +21464,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4339923681977716, guid: 01f848860e8f09b40ab4e619e052a682, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.98
+      value: -6.35
       objectReference: {fileID: 0}
     - target: {fileID: 4339923681977716, guid: 01f848860e8f09b40ab4e619e052a682, type: 2}
       propertyPath: m_LocalPosition.y
@@ -21604,7 +21604,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4261863367967092, guid: f3fe26ee90a965c469e493e647ec2040, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.063
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4261863367967092, guid: f3fe26ee90a965c469e493e647ec2040, type: 2}
       propertyPath: m_LocalPosition.z
