@@ -36,9 +36,10 @@ GameObject:
   - component: {fileID: 4014600274911756}
   - component: {fileID: 54838991898810510}
   - component: {fileID: 65233794260687162}
+  - component: {fileID: 114383651178831312}
   m_Layer: 0
   m_Name: MulinoAvventoDX
-  m_TagString: Untagged
+  m_TagString: Mulino
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,6 +259,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114383651178831312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351379309429126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd07b2b3a7b0ae4099e7971482bdfeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114482028060454108
 MonoBehaviour:
   m_ObjectHideFlags: 1
