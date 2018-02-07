@@ -7,6 +7,7 @@ public class MulinoAvvento : MonoBehaviour {
 
     public void DestroyMulino()
     {
-        transform.DOShakePosition(3f, fadeOut: true);
+
+        Destroy(gameObject);
     }
 }

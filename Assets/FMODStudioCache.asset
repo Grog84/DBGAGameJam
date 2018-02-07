@@ -13,16 +13,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114145546450562800}
-  - {fileID: 114654744716863132}
+  - {fileID: 114651349178988914}
   EditorEvents:
   - {fileID: 114092912958010044}
   - {fileID: 114554688764977604}
   - {fileID: 114363056751054324}
   - {fileID: 114204087900790706}
   - {fileID: 114065085605980106}
-  MasterBankRef: {fileID: 114654744716863132}
+  MasterBankRef: {fileID: 114651349178988914}
   StringsBankRef: {fileID: 114145546450562800}
-  stringsBankWriteTime: 636536325090551136
+  stringsBankWriteTime: 636536338252433380
   cacheVersion: 2
 --- !u!114 &114065085605980106
 MonoBehaviour:
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: event:/Jam/Scream
   guid: da8f088bdfc0f347970a85ac590094c0
   Banks:
-  - {fileID: 114654744716863132}
+  - {fileID: 114651349178988914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -60,7 +60,7 @@ MonoBehaviour:
   Path: event:/Jam/Ambient
   guid: 24b0fddafe0d3e43b8b40fc5eebec491
   Banks:
-  - {fileID: 114654744716863132}
+  - {fileID: 114651349178988914}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Master Bank.strings.bank
-  lastModified: 636536325090551136
+  lastModified: 636536338252433380
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -100,7 +100,7 @@ MonoBehaviour:
   Path: event:/Jam/Explosion
   guid: 8718d03946884d498020ac4ddfb11e0f
   Banks:
-  - {fileID: 114654744716863132}
+  - {fileID: 114651349178988914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -122,7 +122,7 @@ MonoBehaviour:
   Path: event:/Jam/RoblinSound
   guid: 80fe92ca2f9f334f9be96f2184766f54
   Banks:
-  - {fileID: 114654744716863132}
+  - {fileID: 114651349178988914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   Path: event:/Jam/DeadPg
   guid: 40987a1ea9cbf34883722b0bc90d023f
   Banks:
-  - {fileID: 114654744716863132}
+  - {fileID: 114651349178988914}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -152,6 +152,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1286
+--- !u!114 &114651349178988914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\dbga_55\Documents\Unity Projects\DBGAGameJam\Assets\Audio\Master
+    Bank.bank
+  lastModified: 636536338252393376
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 902944
+  Exists: 1
 --- !u!114 &114654744716863132
 MonoBehaviour:
   m_ObjectHideFlags: 0
