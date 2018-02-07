@@ -123,9 +123,9 @@ public class MouseDrag : MonoBehaviour
                 {
                     if (collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
                     {
+                        Debug.Log("Entro");
                         anim.SetTrigger("Explosion");
                         collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
-
                     }
 
                 }
