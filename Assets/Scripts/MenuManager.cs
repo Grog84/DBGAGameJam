@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -18,10 +19,17 @@ public class MenuManager : MonoBehaviour
 	public GameObject levelNineButtonDisabled;
 	public GameObject levelTenButtonDisabled;
 
+	public Animator backgroundAnimator;
+	public Animator corgiAnimator;
+	public Animator fabbroNataleAnimator;
+	public Animator hatPeasantAnimator;
+
+
 	private void Start()
 	{
 		maxLevelReached = PlayerPrefs.GetInt("MaxLevel");
 		SetSelectionPanel();
+		UpdateMenu(maxLevelReached);
 	}
 
 	public void OpenLevelSelection()
@@ -76,6 +84,30 @@ public class MenuManager : MonoBehaviour
 		{
 			levelTenButtonDisabled.SetActive(false);
 		}
+	}
+
+	public void UpdateMenu(int level)
+	{
+		if (level == 0)
+		{
+			backgroundAnimator.SetFloat("LevelProgression", 0);
+			corgiAnimator.Play("CorgiAnimation");
+			fabbroNataleAnimator.Play("FabbroNataleAnimation");
+			hatPeasantAnimator.Play("HatPeasantAnimation");
+		}
+		if (level == 1)
+		{
+			backgroundAnimator.SetFloat("LevelProgression", 1);
+		}
+		if (level == 2)
+		{
+			backgroundAnimator.SetFloat("LevelProgression", 2);
+		}
+		if (level == 3)
+		{
+			backgroundAnimator.SetFloat("LevelProgression", 3);
+		}
+
 	}
 
 	public void LoadLevel(int levelID)
