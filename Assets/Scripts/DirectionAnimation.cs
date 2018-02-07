@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class CoschiotteAnimation : MonoBehaviour {
+public class DirectionAnimation : MonoBehaviour {
 
     public Animator m_Animator;
     NavMeshAgent m_Agent;
@@ -15,7 +15,7 @@ public class CoschiotteAnimation : MonoBehaviour {
     [Range(5, 80)]
     public float sideAngleRange = 20f; 
 
-    private void Awake()
+    public virtual void Awake()
     {
         m_Agent = GetComponent<NavMeshAgent>();
     }
