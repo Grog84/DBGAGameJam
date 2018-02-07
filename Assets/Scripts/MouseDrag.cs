@@ -11,7 +11,9 @@ public class MouseDrag : MonoBehaviour
     public float yForceAmount = 2f;
     public float maxSqrMagnitude = 1;
     public bool isThrown = false;
-
+    public bool isLanding = false;
+    public Effects impactParticle;
+    public Effects deathParticle;
     public LayerMask groundMask;
 
     Rigidbody m_Brigidbody;
@@ -53,19 +55,21 @@ public class MouseDrag : MonoBehaviour
 
     void ThrowObject()
     {
+        isLanding = true;
         isThrown = true;
         m_Brigidbody.isKinematic = false;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit))
+        if(Physics.Raycast(ray, out hit, groundMask))
         {
             Vector3 dir = hit.point - transform.position;
-            dir.y = yForceAmount;
             float mag = dir.sqrMagnitude;
             mag = Mathf.Min(mag, maxSqrMagnitude);
-
-            m_Brigidbody.AddForce(dir.normalized * mag * multiplyFactor);
+            Debug.Log((float)mag);
+            dir = dir.normalized * mag;
+            dir.y = yForceAmount;
+            m_Brigidbody.AddForce(dir * multiplyFactor);
         }
     }
 
@@ -78,12 +82,16 @@ public class MouseDrag : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision);
-        if (collision.transform.tag == "Ground" || collision.transform.tag == "Enemy")
+        if (collision.transform.tag == "Ground" || collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             isSelected = false;
             isThrown = false;
             m_Sprite.localScale = new Vector3(1 , 1 , 1);
-            ParticleManager.instance.EmitParticles(Effects.Death, transform.position);
+            if (isLanding)
+            {
+                isLanding = false;
+                ParticleManager.instance.EmitParticles(impactParticle, transform.position);
+            }
         }
         //if(isSelected && collision.transform.tag == "Enemy")
         //{
@@ -91,6 +99,10 @@ public class MouseDrag : MonoBehaviour
         //}
     }
     
+    void Death()
+    {
+        Destroy(gameObject);
+    }
 
     private void Update()
     {
