@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212670323807266886}
   - component: {fileID: 95038805062413440}
   - component: {fileID: 114096862123224742}
+  - component: {fileID: 65501693474863682}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1892850874847670}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.16, y: -0.25, z: 1.2072663}
+  m_LocalPosition: {x: 4.66, y: -0.25, z: 1.2072663}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4305564757673838}
@@ -102,6 +103,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8964472, y: 0.78861076, z: 0.20000005}
   m_Center: {x: 0.019930601, y: 0.007315472, z: -7.0631695e-18}
+--- !u!65 &65501693474863682
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789335702569540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 2.5600007, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0.000000014901161}
 --- !u!95 &95038805062413440
 Animator:
   serializedVersion: 3
