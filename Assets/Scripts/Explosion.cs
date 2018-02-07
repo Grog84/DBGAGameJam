@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour {
 
+    AudioEmitter explosionAudio;
+
     public void DestroyBomb()
     {
         transform.parent.GetComponent<Bomb>().numberOfTap = -1;
@@ -30,6 +32,12 @@ public class Explosion : MonoBehaviour {
             other.GetComponent<MouseDrag>().anim.SetTrigger("Explosion");
         }
         
+
+    }
+
+    private void Start()
+    {
+        explosionAudio = GetComponent<AudioEmitter>();
 
     }
 

@@ -33,7 +33,8 @@ public class HeroManager : MonoBehaviour
     public float drunkDuration;
 
     NavMeshAgent m_NavAgent;
-
+    [Space(10)]
+    public AudioEmitter deathAudio;
 
     private void Awake()
     {
@@ -45,6 +46,7 @@ public class HeroManager : MonoBehaviour
     {
         anim.SetInteger("DeathIndex", (int)death);
         m_NavAgent.speed = 0;
+        deathAudio.PlaySound();
 
         if (death == DeathType.Decapitation)
         {

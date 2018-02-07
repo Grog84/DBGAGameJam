@@ -378,11 +378,40 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01f848860e8f09b40ab4e619e052a682, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &434216581 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1314288578771202, guid: f3fe26ee90a965c469e493e647ec2040,
+    type: 2}
+  m_PrefabInternal: {fileID: 1824040789}
+--- !u!114 &434216588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434216581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c770209b7535b4f85c24340bf6a82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventPath: event:/Jam/DeadPg
 --- !u!1 &596530947 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1789335702569540, guid: 79e754cf36d88f749943250d2f3889ac,
     type: 2}
   m_PrefabInternal: {fileID: 1890647676}
+--- !u!114 &596530948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596530947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c770209b7535b4f85c24340bf6a82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventPath: event:/Jam/Explosion
 --- !u!65 &596530952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -504,7 +533,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4014600274911756, guid: b7f3a546bcda68f42bd227494fc4c6eb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.08
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 4014600274911756, guid: b7f3a546bcda68f42bd227494fc4c6eb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1107,6 +1136,11 @@ Prefab:
       propertyPath: targets.Array.data[3]
       value: 
       objectReference: {fileID: 361147662}
+    - target: {fileID: 114169947130621116, guid: f3fe26ee90a965c469e493e647ec2040,
+        type: 2}
+      propertyPath: deathAudio
+      value: 
+      objectReference: {fileID: 434216588}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3fe26ee90a965c469e493e647ec2040, type: 2}
   m_IsPrefabParent: 0
@@ -1211,7 +1245,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4657395693837802, guid: 79e754cf36d88f749943250d2f3889ac, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.66
+      value: 1.74
       objectReference: {fileID: 0}
     - target: {fileID: 4657395693837802, guid: 79e754cf36d88f749943250d2f3889ac, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1344,6 +1378,7 @@ GameObject:
   - component: {fileID: 2008753149}
   - component: {fileID: 2008753148}
   - component: {fileID: 2008753147}
+  - component: {fileID: 2008753152}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1421,6 +1456,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2008753152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2008753146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1001 &2078946901
 Prefab:
   m_ObjectHideFlags: 0

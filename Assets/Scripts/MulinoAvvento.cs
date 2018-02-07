@@ -10,4 +10,12 @@ public class MulinoAvvento : MonoBehaviour {
         ParticleManager.instance.EmitParticles(Effects.Smoke, transform.position);
         Destroy(gameObject);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Hero")
+        {
+            collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
+        }
+    }
 }
