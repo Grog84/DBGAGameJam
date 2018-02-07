@@ -10,6 +10,7 @@ TagManager:
   - Hero
   - Mulino
   - FearTrigger
+  - Beer
   layers:
   - Default
   - TransparentFX
