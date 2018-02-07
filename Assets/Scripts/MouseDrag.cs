@@ -101,14 +101,14 @@ public class MouseDrag : MonoBehaviour
                 }
             }
 
-            else if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
-            {
-                if (collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
-                {
-                    collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
-                    Destroy(gameObject);
-                }
-            }
+            //else if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            //{
+            //    if (collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
+            //    {
+            //        collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
+            //        Destroy(gameObject);
+            //    }
+            //}
 
         }
     }
