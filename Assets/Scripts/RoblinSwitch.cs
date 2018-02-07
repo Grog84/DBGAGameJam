@@ -35,6 +35,18 @@ public class RoblinSwitch : MonoBehaviour {
 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(normalState.activeSelf)
+        {
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
+            {
+                collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
+                Destroy(gameObject);
+            }
+        }
+    }
+
     private void OnMouseUp()
     {
         m_MouseDrag.OnMouseUp();

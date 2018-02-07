@@ -93,24 +93,17 @@ public class MouseDrag : MonoBehaviour
             {
                 isLanding = false;
                 ParticleManager.instance.EmitParticles(impactParticle, transform.position);
-                if(gameObject.layer == LayerMask.NameToLayer("Enemy"))
+
+                if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
                 {
                     if(collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
                     {
                         collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Squished,transform);
                     }
+
                     Destroy(thisObj);
                 }
             }
-
-            //else if (gameObject.layer == LayerMask.NameToLayer("Enemy"))
-            //{
-            //    if (collision.gameObject.layer == LayerMask.NameToLayer("Hero"))
-            //    {
-            //        collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
-            //        Destroy(gameObject);
-            //    }
-            //}
 
         }
     }

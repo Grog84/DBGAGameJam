@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SpawnEnemyType{enemy1 = 0, enemy2 = 1, Random = 2 };
+public enum SpawnEnemyType{Roblin = 0, enemy2 = 1, Random = 2 };
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -22,11 +22,11 @@ public class EnemySpawn : MonoBehaviour
         Quaternion rot = gameObject.transform.rotation;
         if (enemyType == SpawnEnemyType.Random)
         {
-            Instantiate(enemyTypes[Random.Range(0, enemyTypes.Length)], pos, rot);
+            Instantiate(enemyTypes[Random.Range(0, enemyTypes.Length)], pos, Quaternion.identity);
         }
         else
         {
-            Instantiate(enemyTypes[(int)enemyType], pos, rot);
+            Instantiate(enemyTypes[(int)enemyType], pos, Quaternion.identity);
         }
     }
 
