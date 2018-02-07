@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -62,6 +63,12 @@ public class GameManager : MonoBehaviour
 	public void SaveGameStatus()
 	{		
 		PlayerPrefs.SetInt("MaxLevel", Mathf.Max(PlayerPrefs.GetInt("MaxLevel"), levelNumber));
+	}
+
+	public void ReloadScene()
+	{
+		var currentScene = SceneManager.GetActiveScene().name;
+		SceneManager.LoadScene(currentScene);
 	}
 
 	IEnumerator WaitForFade()
