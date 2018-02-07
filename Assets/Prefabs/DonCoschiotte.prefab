@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 114169947130621116}
   m_Layer: 10
   m_Name: DonCoschiotte
-  m_TagString: Untagged
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,13 +220,9 @@ MonoBehaviour:
   endDrunk: 1
   startCharmed: 0
   endCharmed: 1
-  enterStunDuration: 0
   stunDuration: 0
-  enterScaredDuration: 0
   scaredDuration: 0
-  enterDrunkDuration: 0
   drunkDuration: 0
-  charmedDuration: 0
 --- !u!114 &114378796029383004
 MonoBehaviour:
   m_ObjectHideFlags: 1
