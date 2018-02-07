@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222072212442916804}
   - component: {fileID: 114325968994299218}
   - component: {fileID: 95239220020088670}
+  - component: {fileID: 114751512748514772}
   m_Layer: 0
   m_Name: HatPeasant
   m_TagString: Untagged
@@ -73,6 +74,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114751512748514772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1548319836927636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4c11a412a005f44ab279f390579d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animType: 0
 --- !u!222 &222072212442916804
 CanvasRenderer:
   m_ObjectHideFlags: 1

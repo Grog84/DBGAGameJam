@@ -91,9 +91,9 @@ public class MenuManager : MonoBehaviour
 		if (level == 0)
 		{
 			backgroundAnimator.SetFloat("LevelProgression", 0);
-			corgiAnimator.Play("CorgiAnimation");
-			fabbroNataleAnimator.Play("FabbroNataleAnimation");
-			hatPeasantAnimator.Play("HatPeasantAnimation");
+			//corgiAnimator.Play("CorgiAnimation");
+			//fabbroNataleAnimator.Play("FabbroNataleAnimation");
+			//hatPeasantAnimator.Play("HatPeasantAnimation");
 		}
 		if (level == 1)
 		{
