@@ -122,5 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 23039468470991902}
-  timer: 0
+  timer: 4
   gm: {fileID: 0}
