@@ -57,6 +57,8 @@ public class HeroManager : MonoBehaviour
             heroHead.transform.parent = null;
             heroHead.GetComponent<Rigidbody>().AddForce(dir * headForce);
         }
+
+        StartCoroutine(RestartLev());
     }
 
     private void OnTriggerEnter(Collider other)
