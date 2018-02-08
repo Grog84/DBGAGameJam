@@ -135,15 +135,15 @@ public class MenuManager : MonoBehaviour
 			//fabbroNataleAnimator.Play("FabbroNataleAnimation");
 			//hatPeasantAnimator.Play("HatPeasantAnimation");
 		}
-		if (level <= 2)
+		if (level > 1 && level <= 2)
 		{
 			backgroundAnimator.SetFloat("LevelProgression", 1);
 		}
-		if (level <= 4)
+		if (level > 2 && level <= 4)
 		{
 			backgroundAnimator.SetFloat("LevelProgression", 2);
 		}
-		if (level <= 6)
+		if (level > 4 && level <= 6)
 		{
 			backgroundAnimator.SetFloat("LevelProgression", 3);
 		}
