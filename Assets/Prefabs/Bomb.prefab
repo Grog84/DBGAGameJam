@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95038805062413440}
   - component: {fileID: 114096862123224742}
   - component: {fileID: 65501693474863682}
+  - component: {fileID: 114454155250803558}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1892850874847670}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.66, y: -0.25, z: 1.2072663}
+  m_LocalPosition: {x: -1.36, y: 1.03, z: 25.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4305564757673838}
@@ -113,8 +114,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.5600007, z: 0.20000005}
-  m_Center: {x: 0, y: 0, z: 0.000000014901161}
+  m_Size: {x: 2.56, y: 2.5600007, z: 1.3017037}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95038805062413440
 Animator:
   serializedVersion: 3
@@ -157,6 +158,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d2c625f6e9c06418e90e966f1c538a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAudio: {fileID: 114454155250803558}
+--- !u!114 &114454155250803558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789335702569540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c770209b7535b4f85c24340bf6a82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventPath: event:/Jam/Explosion
 --- !u!212 &212517940453632062
 SpriteRenderer:
   m_ObjectHideFlags: 1

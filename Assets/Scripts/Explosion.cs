@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour {
 
-    AudioEmitter explosionAudio;
+    public AudioEmitter explosionAudio;
 
     public void DestroyBomb()
     {
@@ -16,10 +16,12 @@ public class Explosion : MonoBehaviour {
     {
         if (other.tag == "Hero")
         {
+            Debug.Log("DestroyHero");
             other.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
         }
         else if (other.tag == "Enemy")
         {
+            Debug.Log("DestroyEnemy");
             ParticleManager.instance.EmitParticles(Effects.Death, other.transform.position);
             Destroy(other.gameObject);
         }
@@ -30,6 +32,7 @@ public class Explosion : MonoBehaviour {
         }
         else if (other.tag == "Interactable")
         {
+            Debug.Log("DestroyInter");
             other.GetComponent<MouseDrag>().anim.SetTrigger("Explosion");
         }
         
@@ -39,7 +42,7 @@ public class Explosion : MonoBehaviour {
     private void Start()
     {
         explosionAudio = GetComponent<AudioEmitter>();
-
+        explosionAudio.PlaySound();
     }
 
 }
