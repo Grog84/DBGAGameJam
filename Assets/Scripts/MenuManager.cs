@@ -27,14 +27,16 @@ public class MenuManager : MonoBehaviour
 
     [Space(10)]
     public AudioEmitter button;
+    public AudioEmitter bkg;
 
-
-	private void Start()
+    private void Start()
 	{
 		maxLevelReached = PlayerPrefs.GetInt("MaxLevel");
 		SetSelectionPanel();
 		UpdateMenu(maxLevelReached);
-	}
+        bkg.PlaySound();
+
+    }
 
 	public void OpenLevelSelection()
 	{
@@ -143,7 +145,7 @@ public class MenuManager : MonoBehaviour
 		{
 			backgroundAnimator.SetFloat("LevelProgression", 2);
 		}
-		if (level > 4 && level <= 6)
+		if (level > 4)
 		{
 			backgroundAnimator.SetFloat("LevelProgression", 3);
 		}

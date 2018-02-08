@@ -16,13 +16,17 @@ public class GameManager : MonoBehaviour
 	public float fadeDuration;
 	public int levelNumber;
 
+    public AudioEmitter lvlMusic;
+
 	private void Start()
 	{
 		Fade(startGameFadeAlpha, fadeDuration);
 		StartCoroutine(WaitForFade());
 		gamePanel.SetActive(true);
 		pausePanel.SetActive(false);
-	}
+        lvlMusic.PlaySound();
+
+    }
 
 	private void Update()
 	{

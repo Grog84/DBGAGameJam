@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 65290990704173084}
   - component: {fileID: 114763622339832118}
   - component: {fileID: 54052170459365622}
+  - component: {fileID: 114677909000313004}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Interactable
@@ -129,6 +130,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882b9ceebbfe76047a1883460f326deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114677909000313004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367906910454652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c770209b7535b4f85c24340bf6a82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventPath: event:/Jam/Explosion
 --- !u!114 &114763622339832118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,6 +169,7 @@ MonoBehaviour:
   anim: {fileID: 95779272114881672}
   m_Sprite: {fileID: 4072700058174638}
   thisObj: {fileID: 1367906910454652}
+  explosionAudio: {fileID: 114677909000313004}
 --- !u!212 &212090242792941562
 SpriteRenderer:
   m_ObjectHideFlags: 1
