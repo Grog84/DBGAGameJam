@@ -3279,6 +3279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1887824498}
   - component: {fileID: 1887824499}
+  - component: {fileID: 1887824500}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -3321,6 +3322,19 @@ MonoBehaviour:
   levelNineButtonDisabled: {fileID: 376041351}
   levelTenButtonDisabled: {fileID: 2039016133}
   backgroundAnimator: {fileID: 1869381611}
+  button: {fileID: 1887824500}
+--- !u!114 &1887824500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887824497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c770209b7535b4f85c24340bf6a82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventPath: event:/Jam/Menu Button Sound
 --- !u!1 &1911630121
 GameObject:
   m_ObjectHideFlags: 0

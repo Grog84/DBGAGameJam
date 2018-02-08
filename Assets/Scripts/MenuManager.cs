@@ -21,9 +21,12 @@ public class MenuManager : MonoBehaviour
 	public GameObject levelTenButtonDisabled;
 
 	public Animator backgroundAnimator;
-	//public Animator corgiAnimator;
-	//public Animator fabbroNataleAnimator;
-	//public Animator hatPeasantAnimator;
+    //public Animator corgiAnimator;
+    //public Animator fabbroNataleAnimator;
+    //public Animator hatPeasantAnimator;
+
+    [Space(10)]
+    public AudioEmitter button;
 
 
 	private void Start()
@@ -149,7 +152,9 @@ public class MenuManager : MonoBehaviour
 
 	public void LoadLevel(int levelID)
 	{
-		if (levelID == 1)
+        button.PlaySound();
+
+        if (levelID == 1)
 		{
 			SceneManager.LoadScene("Livello_01Official");
 		}

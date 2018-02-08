@@ -24,7 +24,7 @@ public class HeroManager : MonoBehaviour
     public bool startCharmed = false;
     public bool endCharmed = true;
 
-    float initialSpeed;
+    public float initialSpeed;
 
     [Header("Statistics and Cooldowns")]
     public float stunDuration;
@@ -33,15 +33,17 @@ public class HeroManager : MonoBehaviour
 
     public float drunkDuration;
 
+
     NavMeshAgent m_NavAgent;
     [Space(10)]
     public AudioEmitter deathAudio;
     public AudioEmitter winAudio;
+    public AudioEmitter inLoveAudio;
 
-    private void Awake()
+    private void Start()
     {
         m_NavAgent = GetComponent<NavMeshAgent>();
-        float initialSpeed = m_NavAgent.speed;
+        initialSpeed = m_NavAgent.speed;
     }
 
     public void Death(DeathType death, Transform enemy)
@@ -122,6 +124,7 @@ public class HeroManager : MonoBehaviour
 
     IEnumerator Charmed()
     {
+        inLoveAudio.PlaySound();
         startCharmed = false;
         endCharmed = false;
         anim.SetFloat("State", 4);
