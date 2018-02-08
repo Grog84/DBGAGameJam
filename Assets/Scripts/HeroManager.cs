@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public enum DeathType { None = 0, Decapitation = 1, Squished = 2 }
 
@@ -35,6 +36,7 @@ public class HeroManager : MonoBehaviour
     NavMeshAgent m_NavAgent;
     [Space(10)]
     public AudioEmitter deathAudio;
+    public AudioEmitter winAudio;
 
     private void Awake()
     {
@@ -123,7 +125,6 @@ public class HeroManager : MonoBehaviour
         anim.SetFloat("State", 4);
         while (!endCharmed)
         {
-            Debug.Log("still charmed");
             yield return null;
         }
 
@@ -132,7 +133,11 @@ public class HeroManager : MonoBehaviour
         
     }
 
-  
+    IEnumerator RestartLev()
+    {
+        yield return new WaitForSecondsRealtime(5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     void Update ()
     {

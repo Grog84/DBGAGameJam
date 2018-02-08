@@ -132,15 +132,15 @@ public class MenuManager : MonoBehaviour
 			//fabbroNataleAnimator.Play("FabbroNataleAnimation");
 			//hatPeasantAnimator.Play("HatPeasantAnimation");
 		}
-		if (level == 2)
+		if (level <= 2)
 		{
 			backgroundAnimator.SetFloat("LevelProgression", 1);
 		}
-		if (level == 4)
+		if (level <= 4)
 		{
 			backgroundAnimator.SetFloat("LevelProgression", 2);
 		}
-		if (level == 6)
+		if (level <= 6)
 		{
 			backgroundAnimator.SetFloat("LevelProgression", 3);
 		}
@@ -169,18 +169,18 @@ public class MenuManager : MonoBehaviour
 		{
 			SceneManager.LoadScene("Livello_05Official");
 		}
-		//if (levelID == 6)
-		//{
-		//	SceneManager.LoadScene("Livello_06Official");
-		//}
-		//if (levelID == 7)
-		//{
-		//	SceneManager.LoadScene("Livello_07Official");
-		//}
-		if (levelID == 8)
+        if (levelID == 6)
+        {
+            SceneManager.LoadScene("Livello_06Official 2");
+        }
+        if (levelID == 7)
+        {
+            SceneManager.LoadScene("Livello_07Official");
+        }
+        if (levelID == 8)
 		{
-			// Da settare
-		}
+            SceneManager.LoadScene("Livello_08Official");
+        }
 		if (levelID == 9)
 		{
 			// Da settare

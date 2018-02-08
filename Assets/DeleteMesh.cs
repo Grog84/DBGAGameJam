@@ -28,6 +28,7 @@ public class DeleteMesh : MonoBehaviour
     {
         other.gameObject.GetComponent<NavMeshAgent>().speed = 0;
         other.gameObject.GetComponent<HeroManager>().anim.SetTrigger("Victory");
+        other.gameObject.GetComponent<HeroManager>().winAudio.PlaySound();
         yield return new WaitForSeconds(timer);
         gm.SaveGameStatus();
         SceneManager.LoadScene("GM_SelectionMenu");
