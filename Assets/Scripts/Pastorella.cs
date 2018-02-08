@@ -9,6 +9,7 @@ public class Pastorella : MonoBehaviour {
     private void Start()
     {
         heroManager = FindObjectOfType<HeroManager>();
+        CharmPlayer();
     }
 
     void CharmPlayer()

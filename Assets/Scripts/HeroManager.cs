@@ -123,6 +123,7 @@ public class HeroManager : MonoBehaviour
         anim.SetFloat("State", 4);
         while (!endCharmed)
         {
+            Debug.Log("still charmed");
             yield return null;
         }
 
