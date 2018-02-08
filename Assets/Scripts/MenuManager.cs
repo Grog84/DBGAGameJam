@@ -55,34 +55,70 @@ public class MenuManager : MonoBehaviour
 		}
 		else if (maxLevelReached == 2)
 		{
+			levelTwoButtonDisabled.SetActive(false);
 			levelThreeButtonDisabled.SetActive(false);
 		}
 		else if (maxLevelReached == 3)
 		{
+			levelTwoButtonDisabled.SetActive(false);
+			levelThreeButtonDisabled.SetActive(false);
 			levelFourButtonDisabled.SetActive(false);
 		}
 		else if (maxLevelReached == 4)
 		{
+			levelTwoButtonDisabled.SetActive(false);
+			levelThreeButtonDisabled.SetActive(false);
+			levelFourButtonDisabled.SetActive(false);
 			levelFiveButtonDisabled.SetActive(false);
 		}
 		else if (maxLevelReached == 5)
 		{
+			levelTwoButtonDisabled.SetActive(false);
+			levelThreeButtonDisabled.SetActive(false);
+			levelFourButtonDisabled.SetActive(false);
+			levelFiveButtonDisabled.SetActive(false);
 			levelSixButtonDisabled.SetActive(false);
 		}
 		else if (maxLevelReached == 6)
 		{
+			levelTwoButtonDisabled.SetActive(false);
+			levelThreeButtonDisabled.SetActive(false);
+			levelFourButtonDisabled.SetActive(false);
+			levelFiveButtonDisabled.SetActive(false);
+			levelSixButtonDisabled.SetActive(false);
 			levelSevenButtonDisabled.SetActive(false);
 		}
 		else if (maxLevelReached == 7)
 		{
+			levelTwoButtonDisabled.SetActive(false);
+			levelThreeButtonDisabled.SetActive(false);
+			levelFourButtonDisabled.SetActive(false);
+			levelFiveButtonDisabled.SetActive(false);
+			levelSixButtonDisabled.SetActive(false);
+			levelSevenButtonDisabled.SetActive(false);
 			levelEightButtonDisabled.SetActive(false);
 		}
 		else if (maxLevelReached == 8)
 		{
+			levelTwoButtonDisabled.SetActive(false);
+			levelThreeButtonDisabled.SetActive(false);
+			levelFourButtonDisabled.SetActive(false);
+			levelFiveButtonDisabled.SetActive(false);
+			levelSixButtonDisabled.SetActive(false);
+			levelSevenButtonDisabled.SetActive(false);
+			levelEightButtonDisabled.SetActive(false);
 			levelNineButtonDisabled.SetActive(false);
 		}
 		else if (maxLevelReached == 9)
 		{
+			levelTwoButtonDisabled.SetActive(false);
+			levelThreeButtonDisabled.SetActive(false);
+			levelFourButtonDisabled.SetActive(false);
+			levelFiveButtonDisabled.SetActive(false);
+			levelSixButtonDisabled.SetActive(false);
+			levelSevenButtonDisabled.SetActive(false);
+			levelEightButtonDisabled.SetActive(false);
+			levelNineButtonDisabled.SetActive(false);
 			levelTenButtonDisabled.SetActive(false);
 		}
 	}

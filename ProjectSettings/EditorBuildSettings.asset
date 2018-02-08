@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: 390815697d1490245a5249fecfa5315c
+  - enabled: 1
     path: Assets/Scenes/GM_SelectionMenu.unity
     guid: 51a98296c5350be468edfa333b727877
   - enabled: 0
@@ -14,3 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Official SCenes/Livello_01Official.unity
     guid: 48df885f46287674c985ac095253ed94
+  - enabled: 1
+    path: Assets/Scenes/Official SCenes/Livello_02Official 1.unity
+    guid: e43a9d3c2c6e3544f9e46564ec0fb655
+  - enabled: 1
+    path: Assets/Scenes/Official SCenes/Livello_03Official.unity
+    guid: 2a9eb360faf5d0644894bd4b5755c8a5
+  - enabled: 1
+    path: Assets/Scenes/Official SCenes/Livello_04Official 2.unity
+    guid: 32b34efda7b54264a8e210bea67fc2cc
+  - enabled: 1
+    path: Assets/Scenes/Official SCenes/Livello_05Official.unity
+    guid: 56e06c8720dedeb4297efc817e6d2a28
