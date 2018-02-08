@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114541079288967796}
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   EditorEvents:
   - {fileID: 114482825282354254}
   - {fileID: 114643624223962006}
@@ -36,9 +36,9 @@ MonoBehaviour:
   - {fileID: 114265704420738566}
   - {fileID: 114436557727837050}
   - {fileID: 114750593372736572}
-  MasterBankRef: {fileID: 114010296416592560}
+  MasterBankRef: {fileID: 114938445082335510}
   StringsBankRef: {fileID: 114541079288967796}
-  stringsBankWriteTime: 636536476475433011
+  stringsBankWriteTime: 636536352076049323
   cacheVersion: 2
 --- !u!114 &114010296416592560
 MonoBehaviour:
@@ -73,7 +73,7 @@ MonoBehaviour:
   Path: event:/Jam/Small Crowd Applause
   guid: 4cc205e10c1b7b49b04bb43b7112abf1
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
   Path: event:/Jam/Rock Slide
   guid: 8e54a5013ce4084f889daa70466d42b9
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   Path: event:/Jam/Explosion
   guid: 8718d03946884d498020ac4ddfb11e0f
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -139,7 +139,7 @@ MonoBehaviour:
   Path: event:/Jam/Small Applause
   guid: 73934ecc03681d4f99ba1773a81d9ac8
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -161,7 +161,7 @@ MonoBehaviour:
   Path: event:/Jam/Dog Bark
   guid: c651126d118dad4dad153c071bf80b2b
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   Path: event:/Jam/ArmorTroll
   guid: 9db5128f37fc794296361d9cccd1ff3e
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -205,7 +205,7 @@ MonoBehaviour:
   Path: event:/Jam/DeadPg
   guid: 40987a1ea9cbf34883722b0bc90d023f
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -227,7 +227,7 @@ MonoBehaviour:
   Path: event:/Jam/RoblinSound
   guid: 80fe92ca2f9f334f9be96f2184766f54
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   Path: event:/Jam/Crowd Cheering
   guid: bff9ba15e26a694da96703e58da3741f
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -271,7 +271,7 @@ MonoBehaviour:
   Path: event:/Jam/BackSound
   guid: ca551907cbc1b4478f8a882bf681cb57
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -293,7 +293,7 @@ MonoBehaviour:
   Path: event:/Jam/LevelMusic
   guid: 24b0fddafe0d3e43b8b40fc5eebec491
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
   Path: event:/Jam/KeySound
   guid: 5d31f1aadaa4af4389f699e9abb9bfac
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Master Bank.strings.bank
-  lastModified: 636536476475433011
+  lastModified: 636536352076049323
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -373,7 +373,7 @@ MonoBehaviour:
   Path: event:/Jam/PastorellaSpawn
   guid: 725adb8153ef4640838f65708026090d
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -395,7 +395,7 @@ MonoBehaviour:
   Path: event:/Jam/Menu Button Sound
   guid: 951b16222a4da74fad72fb77a8c4a438
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -417,7 +417,7 @@ MonoBehaviour:
   Path: event:/Jam/Flying Object
   guid: a32e4d2b149259449787f2d4bec02769
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -439,7 +439,7 @@ MonoBehaviour:
   Path: event:/Jam/Medium Crowd Cheering
   guid: 2fb40847c00dcf4c83f9407635cf3ff7
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -461,7 +461,7 @@ MonoBehaviour:
   Path: event:/Jam/PGinLove
   guid: 49bcdece85111c40b7bf07bccdd1c703
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -483,7 +483,7 @@ MonoBehaviour:
   Path: event:/Jam/TownMusic
   guid: 8e5d4b60faf25343b2a7a7f665f360b8
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -505,7 +505,7 @@ MonoBehaviour:
   Path: event:/Jam/LevelComplete
   guid: 694b1235dd02184f80462218e0ca2cfc
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -527,7 +527,7 @@ MonoBehaviour:
   Path: event:/Jam/Scream
   guid: da8f088bdfc0f347970a85ac590094c0
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -535,6 +535,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 685
+--- !u!114 &114938445082335510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\dbga_55\Documents\Unity Projects\DBGAGameJam\Assets\Audio\Master
+    Bank.bank
+  lastModified: 636536352076019323
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 3169760
+  Exists: 1
 --- !u!114 &114982971012664032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,7 +568,7 @@ MonoBehaviour:
   Path: event:/Jam/Level Select
   guid: bc0299dd5640054b9e9bd3dcb78d55c2
   Banks:
-  - {fileID: 114010296416592560}
+  - {fileID: 114938445082335510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
