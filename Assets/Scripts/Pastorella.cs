@@ -5,11 +5,13 @@ using UnityEngine;
 public class Pastorella : MonoBehaviour {
 
     HeroManager heroManager;
+    public AudioEmitter spawn;
 
     private void Start()
     {
         heroManager = FindObjectOfType<HeroManager>();
         CharmPlayer();
+        spawn.PlaySound();
     }
 
     void CharmPlayer()
