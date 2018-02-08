@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4168295519460830}
   - component: {fileID: 114859741983342756}
+  - component: {fileID: 114361655913834164}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -40,6 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114361655913834164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1434596111941716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c770209b7535b4f85c24340bf6a82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventPath: event:/Jam/LevelMusic
 --- !u!114 &114859741983342756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58,3 +71,5 @@ MonoBehaviour:
   startLevelFadeAlpha: 0
   endLevelFadeAlpha: 1
   fadeDuration: 1
+  levelNumber: 0
+  lvlMusic: {fileID: 114361655913834164}

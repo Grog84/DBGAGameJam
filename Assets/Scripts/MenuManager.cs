@@ -27,14 +27,13 @@ public class MenuManager : MonoBehaviour
 
     [Space(10)]
     public AudioEmitter button;
-    public AudioEmitter bkg;
+    public AudioSource bkg;
 
     private void Start()
 	{
 		maxLevelReached = PlayerPrefs.GetInt("MaxLevel");
 		SetSelectionPanel();
 		UpdateMenu(maxLevelReached);
-        bkg.PlaySound();
 
     }
 
@@ -155,6 +154,7 @@ public class MenuManager : MonoBehaviour
 	public void LoadLevel(int levelID)
 	{
         button.PlaySound();
+        bkg.Stop();
 
         if (levelID == 1)
 		{

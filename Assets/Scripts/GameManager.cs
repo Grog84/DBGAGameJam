@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 		StartCoroutine(WaitForFade());
 		gamePanel.SetActive(true);
 		pausePanel.SetActive(false);
-        lvlMusic.PlaySound();
+        // lvlMusic.PlaySound();
 
     }
 
