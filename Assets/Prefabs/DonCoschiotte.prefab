@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 114410586765743912}
   - component: {fileID: 114169947130621116}
   - component: {fileID: 114115520080049170}
+  - component: {fileID: 114929460439882810}
   m_Layer: 10
   m_Name: DonCoschiotte
   m_TagString: Hero
@@ -237,6 +238,7 @@ MonoBehaviour:
   scaredDuration: 5
   drunkDuration: 5
   deathAudio: {fileID: 114115520080049170}
+  winAudio: {fileID: 114929460439882810}
 --- !u!114 &114378796029383004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,6 +286,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &114929460439882810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314288578771202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c770209b7535b4f85c24340bf6a82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventPath: event:/Jam/LevelComplete
 --- !u!195 &195648639328257720
 NavMeshAgent:
   m_ObjectHideFlags: 1

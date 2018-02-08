@@ -24,6 +24,7 @@ public class Pastorella : MonoBehaviour {
 
     public void Disappear()
     {
+        EndCharmPlayer();
         Destroy(gameObject);
     }
 
