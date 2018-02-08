@@ -15,6 +15,8 @@ public class RoblinSwitch : MonoBehaviour {
 
     bool isActive = true;
 
+    public AudioEmitter roblinSound;
+
     private void Awake()
     {
         normalState = transform.FindDeepChild("Normal").gameObject;
@@ -63,6 +65,8 @@ public class RoblinSwitch : MonoBehaviour {
         m_MouseDrag.thisObj = gameObject;
 
         isActive = false;
+
+        roblinSound.PlaySound();
     }
 
 
