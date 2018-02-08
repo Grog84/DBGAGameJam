@@ -21,6 +21,8 @@ public class MouseDrag : MonoBehaviour
     public Transform m_Sprite;
     public GameObject thisObj;
 
+    public AudioEmitter explosionAudio;
+
     //private void OnMouseDrag()
     //{
     //    Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenDistance);
@@ -121,7 +123,7 @@ public class MouseDrag : MonoBehaviour
 
                     m_Brigidbody.isKinematic = true;
                     anim.SetTrigger("Explosion");
-
+                    explosionAudio.PlaySound();
                 }
             }
             else
@@ -133,6 +135,7 @@ public class MouseDrag : MonoBehaviour
                         Debug.Log("Entro");
                         anim.SetTrigger("Explosion");
                         collision.gameObject.GetComponent<HeroManager>().Death(DeathType.Decapitation, transform);
+                        explosionAudio.PlaySound();
                     }
 
                 }

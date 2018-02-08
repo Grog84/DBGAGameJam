@@ -15,7 +15,7 @@ public class RoblinSwitch : MonoBehaviour {
 
     bool isActive = true;
 
-    public AudioEmitter roblinSound;
+    public AudioSource roblinSound;
 
     private void Awake()
     {
@@ -57,6 +57,7 @@ public class RoblinSwitch : MonoBehaviour {
 
     public void SwitchStates()
     {
+        roblinSound.Play();
         normalState.SetActive(false);
         ragdollState.SetActive(true);
         m_Navigation.enabled = false;
@@ -66,7 +67,6 @@ public class RoblinSwitch : MonoBehaviour {
 
         isActive = false;
 
-        roblinSound.PlaySound();
     }
 
 
