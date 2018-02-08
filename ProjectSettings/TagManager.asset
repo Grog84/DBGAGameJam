@@ -11,6 +11,7 @@ TagManager:
   - Mulino
   - FearTrigger
   - Beer
+  - EndPoint
   layers:
   - Default
   - TransparentFX

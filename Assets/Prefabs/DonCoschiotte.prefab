@@ -76,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1314288578771202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.84, y: -0.14, z: 4.11}
+  m_LocalPosition: {x: -12.22, y: 0.25, z: 30.666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4452588208249854}
@@ -223,6 +223,7 @@ MonoBehaviour:
   stunDuration: 5
   scaredDuration: 5
   drunkDuration: 5
+  deathAudio: {fileID: 0}
 --- !u!114 &114378796029383004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -266,6 +267,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!195 &195648639328257720
 NavMeshAgent:
   m_ObjectHideFlags: 1
@@ -275,7 +280,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0

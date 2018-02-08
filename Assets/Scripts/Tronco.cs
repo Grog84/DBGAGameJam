@@ -43,7 +43,7 @@ public class Tronco : MonoBehaviour {
         {
             collision.gameObject.GetComponent<MouseDrag>().anim.SetTrigger("Explosion");
         }
-        else if (collision.gameObject.tag == "Wall")
+		else if (collision.gameObject.tag == "EndPoint")
         {
             DestroyTronco();
         }
